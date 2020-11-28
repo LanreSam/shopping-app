@@ -25,3 +25,11 @@ Route::get('users/{name?}', function($name = null){
 Route::get('cart/{items?}', function($items = null){
     return $items. " items added to cart";
 });
+
+Route::get('profiles/{username?}', function($username = null){
+    return $username. ", your items has been added to cart";
+});
+
+Route::match(['get', 'post'], '/students', function (Request $req) {
+    return 'Requested method is ' . $req->method();
+});
