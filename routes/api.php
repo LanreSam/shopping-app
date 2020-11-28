@@ -18,6 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('users', function(){
-    return "hi users";
+Route::get('users/{name?}', function($name = null){
+    return "hi ". $name.", how are you?";
+});
+
+Route::get('cart/{items?}', function($items = null){
+    return $items. " items added to cart";
 });
