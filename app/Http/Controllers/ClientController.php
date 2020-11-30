@@ -28,4 +28,21 @@ class ClientController extends Controller
         ]);
         return $post->json();
     }
+
+    public function updatePost($id)
+    {
+        $update = Http::put('https://jsonplaceholder.typicode.com/posts/'.$id, [
+            'id' => $id,
+            'title' => "cool new title",
+            'body' => "New description"
+        ]);
+        return $update->json();  
+    }
+
+    public function deletePost($id)
+    {
+        $delete = Http::delete('https://jsonplaceholder.typicode.com/posts/'.$id);
+        return "Post deleted successfully";
+        return $delete->json();
+    }
 }
