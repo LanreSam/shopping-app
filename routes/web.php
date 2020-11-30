@@ -31,4 +31,4 @@ Route::get('/posts', [ClientController::class, 'getAllPost'])->name('posts.getal
 
 Route::get('/posts/{id}', [ClientController::class, 'getPostById'])->name('posts.getPostById');
 
-Route::get('/addPost', [ClientController::class, 'addPost'])->name('posts.addPost');
+Route::get('/addpost', [ClientController::class, 'addPost'])->name('posts.addPost');
