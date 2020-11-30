@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\productController;
 use App\Http\Controllers\UsersController;
 
 /*
@@ -17,9 +18,7 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [productController::class, 'index'])->name('fruits.index');
 
 Route::get('/home/{name?}', [HomeController::class, 'index'])->name('home.index');
 
