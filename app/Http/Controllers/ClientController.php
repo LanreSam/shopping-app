@@ -18,4 +18,14 @@ class ClientController extends Controller
         $post = Http::get('https://jsonplaceholder.typicode.com/posts/'.$id);
         return $post->json();
     }
+
+    public function addPost()
+    {
+        $post = Http::post('https://jsonplaceholder.typicode.com/posts', [
+            'userId' => 1,
+            'title' => "new title",
+            'body' => "this is a cool sentence"
+        ]);
+        return $post->json();
+    }
 }

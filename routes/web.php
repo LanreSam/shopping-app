@@ -30,3 +30,5 @@ Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::get('/posts', [ClientController::class, 'getAllPost'])->name('posts.getallpost');
 
 Route::get('/posts/{id}', [ClientController::class, 'getPostById'])->name('posts.getPostById');
+
+Route::get('/addPost', [ClientController::class, 'addPost'])->name('posts.addPost');
