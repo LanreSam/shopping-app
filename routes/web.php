@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -25,3 +26,7 @@ Route::get('/home/{name?}', [HomeController::class, 'index'])->name('home.index'
 Route::get('/aboutus', [AboutController::class, 'about'])->name('aboutus.about');
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
+
+Route::get('/posts', [ClientController::class, 'getAllPost'])->name('posts.getallpost');
+
+Route::get('/posts/{id}', [ClientController::class, 'getPostById'])->name('posts.getPostById');
