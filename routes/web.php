@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AnotherController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FluentController;
 use Illuminate\Support\Facades\Route;
@@ -39,3 +40,5 @@ Route::get('/updatepost/{id}', [ClientController::class, 'updatePost'])->name('p
 Route::get('/deletepost/{id}', [ClientController::class, 'deletePost'])->name('posts.deletePost');
 
 Route::get('/fluent-strings', [FluentController::class, 'index'])->name("fluent-strings.index");
+
+Route::get('/create', [AnotherController::class, 'create'])->name('create.create');
