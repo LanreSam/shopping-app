@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\FluentController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -36,3 +37,5 @@ Route::get('/addpost', [ClientController::class, 'addPost'])->name('posts.addPos
 Route::get('/updatepost/{id}', [ClientController::class, 'updatePost'])->name('posts.updatePost');
 
 Route::get('/deletepost/{id}', [ClientController::class, 'deletePost'])->name('posts.deletePost');
+
+Route::get('/fluent-strings', [FluentController::class, 'index'])->name("fluent-strings.index");
