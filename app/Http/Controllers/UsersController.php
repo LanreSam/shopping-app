@@ -6,14 +6,10 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $name = strtoupper('Ezechie');
-        $users = array(
-            'name' => 'Ezechie Lanre S.',
-            'email' => 'myemail@mail.com',
-            'phone' => '08012345678'
-        );
-        return view('users', compact('name', 'users'));
+        //return "The request method is: ". "<h1>".$request->method()."</h1>";
+        //return $request->path();
+        return $request->url();
     }
 }
