@@ -7,6 +7,7 @@ use App\Http\Controllers\FluentController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\UsersController;
 
@@ -42,3 +43,7 @@ Route::get('/deletepost/{id}', [ClientController::class, 'deletePost'])->name('p
 Route::get('/fluent-strings', [FluentController::class, 'index'])->name("fluent-strings.index");
 
 Route::get('/create', [AnotherController::class, 'create'])->name('create.create');
+
+Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+
+Route::post('/login', [LoginController::class, 'loginSubmit'])->name('login.submit');
