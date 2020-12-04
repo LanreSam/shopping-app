@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\UsersController;
@@ -29,7 +30,7 @@ Route::get('/home/{name?}', [HomeController::class, 'index'])->name('home.index'
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 
-Route::get('/posts', [ClientController::class, 'getAllPost'])->name('posts.getallpost');
+// Route::get('/posts', [ClientController::class, 'getAllPost'])->name('posts.getallpost');
 
 Route::get('/posts/{id}', [ClientController::class, 'getPostById'])->name('posts.getPostById');
 
@@ -52,3 +53,5 @@ Route::get('/session/get', [SessionController::class, 'getSessionData'])->name('
 Route::get('/session/set', [SessionController::class, 'storeSessionData'])->name('Session.set');
 
 Route::get('/session/remove', [SessionController::class, 'removeSessionData'])->name('Session.remove');
+
+Route::get('/posts', [PostController::class, 'getAllPost'])->name('posts.getAllPost');
