@@ -11,7 +11,27 @@
 <body>
     <section>
         <div class="container mt-5">
-            
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            Post details
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="title">Post title</label>
+                                    <input type="text" name="title" class="form-control" value="{{ $post->title }}" placeholder="Enter post title"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="body">Post Description</label>
+                                    <textarea name="body" rows="3" class="form-control">{{ $post->body }}</textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </body>

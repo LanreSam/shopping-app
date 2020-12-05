@@ -30,10 +30,6 @@ Route::get('/home/{name?}', [HomeController::class, 'index'])->name('home.index'
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 
-// Route::get('/posts', [ClientController::class, 'getAllPost'])->name('posts.getallpost');
-
-Route::get('/posts/{id}', [ClientController::class, 'getPostById'])->name('posts.getPostById');
-
 Route::get('/addpost', [ClientController::class, 'addPost'])->name('posts.addPost');
 
 Route::get('/updatepost/{id}', [ClientController::class, 'updatePost'])->name('posts.updatePost');
@@ -60,4 +56,4 @@ Route::get('/add-post', [PostController::class, 'addPost'])->name('post.add');
 
 Route::post('/add-post', [PostController::class, 'addPostSubmit'])->name('post.submit');
 
-Route::get('/posts{id}', [PostController::class, 'getPostById'])->name('post.id');
+Route::get('/posts/{id}', [PostController::class, 'getPostById'])->name('post.id');
