@@ -58,8 +58,8 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <input type="submit" value="Add Grade" class="btn btn-success"/>
-                <input type="submit" value="Delete all" class="btn btn-danger ml-3"/>
+                <a href="/add-grade" class="btn btn-success">Add Grade</a>
+                <a href="#" class="btn btn-danger ml-3">Delete all</a>
             </div>
         </div>
     </section>
