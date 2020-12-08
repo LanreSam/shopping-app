@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AnotherController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FluentController;
+use App\Http\Controllers\gpController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -61,3 +62,9 @@ Route::get('/posts/{id}', [PostController::class, 'getPostById'])->name('post.id
 Route::get('/delete_post/{id}', [PostController::class, 'deletePost'])->name('post.delete');
 
 Route::get('/edit-post/{id}', [PostController::class, 'editPost'])->name('post.edit');
+
+Route::post('/update-post', [PostController::class, 'updatePost'])->name('post.update');
+
+//Routes for gp database and views
+
+Route::get('gp', [gpController::class, 'getAllGrade'])->name('gp.view');

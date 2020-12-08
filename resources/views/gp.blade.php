@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Posts</title>
+    <title>GP database</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
@@ -15,7 +15,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            All Posts
+                            All Grades
                         </div>
                         <div class="card-body">
                             @if(Session::has('msg-delete'))
@@ -26,22 +26,27 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Post title</th>
-                                        <th>Post Body</th>
-                                        <th>Action</th>
+                                        <th>id</th>
+                                        <th>course_code</th>
+                                        <th>score</th>
+                                        <th>course_unit</th>
+                                        <th>grade</th>
+                                        <th>points</th>
+                                        <th>quality_points</th>
+                                        <th>time</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($posts as $post)
+                                    @foreach($grade as $gp)
                                         <tr>
-                                            <td>{{ $post->title }}</td>
-                                            <td>{{ $post->body }}</td>
-                                            <td>
-                                                <a href="/add-post" target="blank_" class="btn btn-success m-1">Add</a>
-                                                <a href="/edit-post/{{ $post->id }}" target="blank_" class="btn btn-info m-1">Edit</a>
-                                                <a href="/posts/{{ $post->id }}" class="btn btn-dark m-1">View</a>
-                                                <a href="/delete_post/{{ $post->id }}" class="btn btn-danger m-1">Delete</a>
-                                            </td>
+                                            <td>{{ $gp->id }}</td>
+                                            <td>{{ $gp->course_code }}</td>
+                                            <td>{{ $gp->score }}</td>
+                                            <td>{{ $gp->course_unit }}</td>
+                                            <td>{{ $gp->grade }}</td>
+                                            <td>{{ $gp->points }}</td>
+                                            <td>{{ $gp->quality_points }}</td>
+                                            <td>{{ $gp->time }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

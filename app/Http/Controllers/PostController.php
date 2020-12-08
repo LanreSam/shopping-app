@@ -39,8 +39,18 @@ class PostController extends Controller
         return back()->with('msg-delete', "Post deleted successfully!");
     }
 
-    public function editPost()
+    public function editPost($id)
     {
-        return view('edit-post');
+        $post = DB::table('posts')->where('id', $id)->first();
+        return view('edit-post', compact('post'));
+    }
+
+    public function updatePost(Request $request)
+    {
+        $update = DB::table('posts')->where('id', $request->id)->update([
+            'title' => $request->title,
+            'body' => $request->body
+        ]);
+        return back()->with('msg-update', "Post updated successfully!");
     }
 }

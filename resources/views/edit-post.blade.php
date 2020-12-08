@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Post</title>
+    <title>Edit Post</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
@@ -15,10 +15,17 @@
                 <div class="col-md-6 offset-md-3">
                     <div class="card">
                         <div class="card-header">
-                            Post details
+                            Edit Post details
                         </div>
                         <div class="card-body">
-                            <form>
+                            @if(Session::has('msg-update'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ Session::get('msg-update') }}
+                                </div>
+                            @endif
+                            <form method="POST" action="{{ route('post.update') }}">
+                                @csrf
+                                <input type="hidden" value="{{ $post->id }}" name="id"/>
                                 <div class="form-group">
                                     <label for="title">Post title</label>
                                     <input type="text" name="title" class="form-control" value="{{ $post->title }}" placeholder="Enter post title"/>
@@ -27,6 +34,7 @@
                                     <label for="body">Post Description</label>
                                     <textarea name="body" rows="3" class="form-control">{{ $post->body }}</textarea>
                                 </div>
+                                <input type="submit" value="Update" class="btn btn-success"/>
                             </form>
                         </div>
                     </div>
