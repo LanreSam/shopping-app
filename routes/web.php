@@ -68,3 +68,5 @@ Route::post('/update-post', [PostController::class, 'updatePost'])->name('post.u
 //Routes for gp database and views
 
 Route::get('gp', [gpController::class, 'getAllGrade'])->name('gp.view');
+
+Route::get('/add-grade', [gpController::class, 'addGrade'])->name('gp.add-grade');

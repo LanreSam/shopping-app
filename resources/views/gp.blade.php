@@ -33,7 +33,8 @@
                                         <th>grade</th>
                                         <th>points</th>
                                         <th>quality_points</th>
-                                        <th>time</th>
+                                        <th>semester</th>
+                                        <th>level</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -46,7 +47,8 @@
                                             <td>{{ $gp->grade }}</td>
                                             <td>{{ $gp->points }}</td>
                                             <td>{{ $gp->quality_points }}</td>
-                                            <td>{{ $gp->time }}</td>
+                                            <td>{{ $gp->semester }}</td>
+                                            <td>{{ $gp->level }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

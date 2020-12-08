@@ -12,4 +12,9 @@ class gpController extends Controller
         $grade = DB::table('gp')->get();
         return view('gp', compact('grade'));
     }
+
+    public function addGrade()
+    {
+        return view('add-grade');
+    }
 }
