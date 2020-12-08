@@ -7,6 +7,8 @@
     <title>Add Grade</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    {{-- font awesome link --}}
+    <script src="https://kit.fontawesome.com/48c2562a43.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section>
@@ -14,7 +16,8 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="card">
-                        <div class="card-header">
+                        <div class="card-header d-flex">
+                            <a href="/gp"><i class="fas fa-arrow-left pt-1 mr-4" aria-hidden="true"></i></a>
                             Add new grade
                         </div>
                         <div class="card-body">
