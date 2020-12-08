@@ -26,45 +26,41 @@
                             <form method="POST" action="{{ route('post.submit') }}">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="course_code"></label>
+                                    <label for="course_code">Course code</label>
                                     <input type="text" name="course_code" class="form-control" placeholder="Enter course code"/>
                                 </div>
                                 <div class="form-group">
-                                    <label for="score"></label>
+                                    <label for="score">Score</label>
                                     <input type="text" name="score" class="form-control" placeholder="Enter score"/>
                                 </div>
                                 <div class="form-group">
-                                    <label for="course_code"></label>
-                                    <input type="text" name="course_code" class="form-control" placeholder="Enter course code"/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="course_unit"></label>
+                                    <label for="course_unit">Course unit</label>
                                     <input type="text" name="course_unit" class="form-control" placeholder="Enter course unit"/>
                                 </div>
-                                <div class="form-group d-flex">
-                                    <label for="semester"></label>
-                                    <select name="semester" class="btn btn-info">
-                                        <option value="" disabled selected>Choose semester</option>
-                                        <option value="">HARMATTAN</option>
-                                        <option value="">RAIN</option>
-                                    </select>
+                                <div class="d-flex">
+                                    <div class="form-group">
+                                        <select name="semester" class="btn btn-info">
+                                            <option value="" disabled selected>Choose semester</option>
+                                            <option value="">HARMATTAN</option>
+                                            <option value="">RAIN</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group ml-3">
+                                        <select name="level" class="btn btn-dark">
+                                            <option value="" disabled selected>Choose level</option>
+                                            <option value="">100</option>
+                                            <option value="">200</option>
+                                            <option value="">300</option>
+                                            <option value="">400</option>
+                                            <option value="">500</option>
+                                            <option value="">600</option>
+                                            <option value="">700</option>
+                                            <option value="">800</option>
+                                            <option value="">900</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="level"></label>
-                                    <select name="level" class="btn btn-dark">
-                                        <option value="" disabled selected>Choose level</option>
-                                        <option value="">100</option>
-                                        <option value="">200</option>
-                                        <option value="">300</option>
-                                        <option value="">400</option>
-                                        <option value="">500</option>
-                                        <option value="">600</option>
-                                        <option value="">700</option>
-                                        <option value="">800</option>
-                                        <option value="">900</option>
-                                    </select>
-                                </div>
-                                <input type="submit" value="Submit" class="btn btn-success m-auto"/>
+                                <input type="submit" value="Submit" class="btn btn-success mt-4"/>
                             </form>
                         </div>
                     </div>

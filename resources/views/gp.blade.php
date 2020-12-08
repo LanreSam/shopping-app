@@ -57,6 +57,10 @@
                     </div>
                 </div>
             </div>
+            <div class="d-flex justify-content-center mt-4">
+                <input type="submit" value="Add Grade" class="btn btn-success"/>
+                <input type="submit" value="Delete all" class="btn btn-danger ml-3"/>
+            </div>
         </div>
     </section>
 </body>
