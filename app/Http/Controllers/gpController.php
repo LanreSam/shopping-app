@@ -17,4 +17,14 @@ class gpController extends Controller
     {
         return view('add-grade');
     }
+
+    public function addGradeSubmit(Request $request)
+    {
+        DB::table('gp')->insert([
+            'course_code'   =>  $request->course_code,
+            'score'         =>  $request->score,
+            'course_unit'   =>  $request->course_unit,
+            
+        ]);
+    }
 }
