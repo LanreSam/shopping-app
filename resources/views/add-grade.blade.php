@@ -26,7 +26,7 @@
                                     {{ Session::get('msg') }}
                                 </div>
                             @endif
-                            <form method="POST" action="{{ route('post.submit') }}">
+                            <form method="POST" action="{{ route('grade.submit') }}">
                                 @csrf
                                 <div class="form-group">
                                     <label for="course_code">Course code</label>
