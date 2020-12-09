@@ -30,35 +30,35 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="course_code">Course code</label>
-                                    <input type="text" name="course_code" class="form-control" placeholder="Enter course code"/>
+                                    <input type="text" name="course_code" class="form-control" placeholder="Enter course code" required/>
                                 </div>
                                 <div class="form-group">
                                     <label for="score">Score</label>
-                                    <input type="text" name="score" class="form-control" placeholder="Enter score"/>
+                                    <input type="text" name="score" class="form-control" placeholder="Enter score" required/>
                                 </div>
                                 <div class="form-group">
                                     <label for="course_unit">Course unit</label>
-                                    <input type="text" name="course_unit" class="form-control" placeholder="Enter course unit"/>
+                                    <input type="text" name="course_unit" class="form-control" placeholder="Enter course unit" required/>
                                 </div>
                                 <div class="d-flex">
                                     <div class="form-group">
                                         <select name="semester" class="btn btn-dark">
                                             <option value="" disabled selected>Choose semester</option>
-                                            <option value="">HARMATTAN</option>
-                                            <option value="">RAIN</option>
+                                            <option value="HARMATTAN">HARMATTAN</option>
+                                            <option value="RAIN">RAIN</option>
                                         </select>
                                     </div>
                                     <div class="form-group ml-3">
                                         <select name="level" class="btn btn-dark">
                                             <option value="" disabled selected>Choose level</option>
-                                            <option value="">100</option>
-                                            <option value="">200</option>
-                                            <option value="">300</option>
-                                            <option value="">400</option>
-                                            <option value="">500</option>
-                                            <option value="">600</option>
-                                            <option value="">700</option>
-                                            <option value="">800</option>
+                                            <option value="100">100</option>
+                                            <option value="200">200</option>
+                                            <option value="300">300</option>
+                                            <option value="400">400</option>
+                                            <option value="500">500</option>
+                                            <option value="600">600</option>
+                                            <option value="700">700</option>
+                                            <option value="800">800</option>
                                             <option value="">900</option>
                                         </select>
                                     </div>

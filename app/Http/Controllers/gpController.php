@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PhpParser\Node\Stmt\ElseIf_;
+use Symfony\Component\Console\Input\Input;
 
 class gpController extends Controller
 {
@@ -53,8 +54,8 @@ class gpController extends Controller
             'score'         =>  $request->score,
             'course_unit'   =>  $request->course_unit,
             'grade'         =>  $grade,
-            'points'         =>  $points,
-            'qp'             =>  $qp,
+            'points'        =>  $points,
+            'quality_points'=>  $qp,
             'semester'      =>  $request->semester,
             'level'         =>  $request->level
         ]);
