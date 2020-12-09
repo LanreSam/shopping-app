@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="d-flex">
                                     <div class="form-group">
-                                        <select name="semester" class="btn btn-info">
+                                        <select name="semester" class="btn btn-dark">
                                             <option value="" disabled selected>Choose semester</option>
                                             <option value="">HARMATTAN</option>
                                             <option value="">RAIN</option>
