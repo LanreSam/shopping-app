@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\SessionController;
@@ -74,6 +75,9 @@ Route::get('/all-posts', [PostController::class, 'getAllPostUsingModel'])->name(
 Route::get('/index', [websiteController::class, 'index']);
 Route::get('/about', [websiteController::class, 'about']);
 Route::get('/contact', [websiteController::class, 'contact']);
+
+//users database route
+Route::get('/users', [PaginationController::class, 'allUsers']);
 
 
 //Routes for gp database and views
