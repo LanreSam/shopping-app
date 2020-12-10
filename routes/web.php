@@ -28,8 +28,6 @@ use App\Http\Controllers\websiteController;
 
 Route::get('/', [productController::class, 'index'])->name('fruits.index');
 
-Route::get('/home/{name?}', [HomeController::class, 'index'])->name('home.index');
-
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 
 Route::get('/addpost', [ClientController::class, 'addPost'])->name('posts.addPost');
