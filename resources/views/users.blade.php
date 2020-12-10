@@ -5,48 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Users</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
-<style>
-    body{
-        background-color: blueviolet;
-        margin: 0;
-        padding: 0;
-    }
-    h1,h2{
-        color: white;
-        text-align: center;
-        font-size: 3rem;
-    }
-    h2{
-        font-size: 1.5rem;
-        letter-spacing: 0.5rem;
-        font-weight: 400;
-    }
-    .container{
-        background-color: white;
-        padding: 100px;
-        margin-top: 80px;
-    }
-</style>
 <body>
-    <h1>Users Page</h1>
-    <h2>Welcome {{ $name }}</h2>
     <div class="container">
-        <h2 style="color: black">User details</h2>
-        <p>Name: {{ $users['name'] }}</p>
-        <p>Email: {{ $users['email'] }}</p>
-        <p>Phone: {{ $users['phone'] }}</p>
-    </div>
-    <div class="container">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nesciunt ab quod perspiciatis
-            soluta veniam deserunt, quibusdam error placeat adipisci? Quas quaerat rem nisi, molestias placeat
-            debitis odit veniam esse ea exercitationem est vel praesentium alias expedita eligendi, dolor harum itaque
-            distinctio ipsam? Qui odit nihil, incidunt consequatur omnis natus id voluptates veniam laboriosam ipsa
-            quasi dicta vitae magni. Non atque odio tempore, consequuntur tenetur ratione qui, ad magni, accusamus ab
-            illum animi velit iste numquam excepturi dolores commodi hic suscipit. Adipisci amet distinctio, iusto quas
-            accusantium, dolore explicabo totam tempora, eum minima molestias eveniet velit sit eius iste iure.
-        </p>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($users as $user)
+                            <tr>
+                                <td>{{ $user->id }}</td>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+                {{ $users->links() }}
+            </div>
+        </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </html>
