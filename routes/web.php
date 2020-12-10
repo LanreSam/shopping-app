@@ -13,6 +13,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\websiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,6 +73,12 @@ Route::get('/left-join', [PostController::class, 'leftJoinClause'])->name('posts
 Route::get('/right-join', [PostController::class, 'rightJoinClause'])->name('posts.rightJoin');
 
 Route::get('/all-posts', [PostController::class, 'getAllPostUsingModel'])->name('posts.all');
+
+//blade master template website route
+Route::get('/index', [websiteController::class, 'index']);
+Route::get('/about', [websiteController::class, 'about']);
+Route::get('/contact', [websiteController::class, 'contact']);
+
 
 //Routes for gp database and views
 
