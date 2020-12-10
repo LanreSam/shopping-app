@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gp extends Model
 {
+    protected $table='gp';
     use HasFactory;
 }

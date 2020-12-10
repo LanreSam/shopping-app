@@ -18,10 +18,10 @@ class CreateGpTable extends Migration
             $table->string('course_code');
             $table->integer('score');
             $table->smallInteger('course_unit');
-            $table->integer('grade');
+            $table->string('grade');
             $table->integer('points');
             $table->integer('quality_points');
-            $table->integer('semester');
+            $table->string('semester');
             $table->integer('level');
             $table->timestamps();
         });
