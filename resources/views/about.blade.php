@@ -6,10 +6,6 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>About Page Content</h1>
-                <ul>
-                    <li><a href="/index">Home</a></li>
-                    <li><a href="/contact">contact</a></li>
-                </ul>
             </div>
         </div>
     </div>
