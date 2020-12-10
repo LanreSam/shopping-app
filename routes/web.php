@@ -71,6 +71,8 @@ Route::get('/left-join', [PostController::class, 'leftJoinClause'])->name('posts
 
 Route::get('/right-join', [PostController::class, 'rightJoinClause'])->name('posts.rightJoin');
 
+Route::get('/all-posts', [PostController::class, 'getAllPostUsingModel'])->name('posts.all');
+
 //Routes for gp database and views
 
 Route::get('gp', [gpController::class, 'getAllGrade'])->name('gp.view');
