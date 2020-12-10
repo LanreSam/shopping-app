@@ -65,6 +65,12 @@ Route::get('/edit-post/{id}', [PostController::class, 'editPost'])->name('post.e
 
 Route::post('/update-post', [PostController::class, 'updatePost'])->name('post.update');
 
+Route::get('/inner-join', [PostController::class, 'innerJoinClause'])->name('posts.innerJoin');
+
+Route::get('/left-join', [PostController::class, 'leftJoinClause'])->name('posts.leftJoin');
+
+Route::get('/right-join', [PostController::class, 'rightJoinClause'])->name('posts.rightJoin');
+
 //Routes for gp database and views
 
 Route::get('gp', [gpController::class, 'getAllGrade'])->name('gp.view');
