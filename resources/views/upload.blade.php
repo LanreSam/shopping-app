@@ -19,7 +19,11 @@
                     </div>
                     <div class="card-body">
                         <form action="" method="post" enctype="multipart/form-data">
-
+                            @csrf
+                            <div class="form-group">
+                                <label for="file">Upload File</label>
+                                <input type="file" name="file" id="" class="form-control">
+                            </div>
                         </form>
                     </div>
                 </div>
