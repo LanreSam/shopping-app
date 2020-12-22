@@ -13,7 +13,7 @@ class uploadController extends Controller
 
     public function uploadFile(Request $request)
     {
-        $request->file()->store('public');
+        $request->file->store('public');
         return 'file has been uploaded successfully';
     }
 }
