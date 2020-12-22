@@ -22,8 +22,9 @@
                             @csrf
                             <div class="form-group">
                                 <label for="file">Upload File</label>
-                                <input type="file" name="file" id="" class="form-control">
+                                <input type="file" name="file" id="file" class="form-control">
                             </div>
+                            <button type="submit" class="btn btn-success mt-3">Upload</button>
                         </form>
                     </div>
                 </div>
