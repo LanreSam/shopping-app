@@ -26,7 +26,9 @@ use App\Http\Controllers\websiteController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 
 Route::get('/addpost', [ClientController::class, 'addPost'])->name('posts.addPost');
