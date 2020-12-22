@@ -93,3 +93,4 @@ Route::post('/add-grade', [gpController::class, 'addGradeSubmit'])->name('grade.
 
 //Upload route
 Route::get('/upload', [uploadController::class, 'uploadForm']);
+Route::get('/uploadfile', [uploadController::class, 'uploadFile'])->name('upload.uploadfile');
