@@ -16,6 +16,7 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\uploadController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\websiteController;
+use App\paymentGateway\payment;
 
 /*
 |--------------------------------------------------------------------------
@@ -94,3 +95,8 @@ Route::post('/add-grade', [gpController::class, 'addGradeSubmit'])->name('grade.
 //Upload route
 Route::get('/upload', [uploadController::class, 'uploadForm']);
 Route::post('/uploadfile', [uploadController::class, 'uploadFile'])->name('upload.uploadfile');
+
+//facdes
+Route::get('/payment', function () {
+    return payment::process();
+});
