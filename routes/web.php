@@ -13,6 +13,7 @@ use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\uploadController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\websiteController;
 
@@ -89,3 +90,6 @@ Route::get('gp', [gpController::class, 'getAllGrade'])->name('gp.view');
 Route::get('/add-grade', [gpController::class, 'addGrade'])->name('gp.add-grade');
 
 Route::post('/add-grade', [gpController::class, 'addGradeSubmit'])->name('grade.submit');
+
+//Upload route
+Route::get('/upload', [uploadController::class, 'uploadForm']);
