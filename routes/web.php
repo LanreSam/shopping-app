@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\mailController;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\productController;
@@ -100,3 +101,6 @@ Route::post('/uploadfile', [uploadController::class, 'uploadFile'])->name('uploa
 Route::get('/payment', function () {
     return payment::process();
 });
+
+//Sending mails
+Route::get('/send-mail', [mailController::class, 'sendMails']);
