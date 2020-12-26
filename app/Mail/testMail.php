@@ -32,6 +32,9 @@ class testMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('test mail from Lanre')->view('emails.mail');
+        return $this->subject('test mail from Lanre')->view('emails.mail')
+        // return $this->subject('Mail from Laravel 8 Gmail')
+        //     ->view('emails.gmail')
+            ->from('ezechelanre@gmail.com');
     }
 }
