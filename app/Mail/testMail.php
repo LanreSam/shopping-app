@@ -12,7 +12,7 @@ class testMail extends Mailable
 
 
 
-    public $data;
+    public $details;
     use Queueable, SerializesModels;
 
     /**
@@ -20,9 +20,9 @@ class testMail extends Mailable
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct($details)
     {
-        $this->data = $data;
+        $this->details = $details;
     }
 
     /**
