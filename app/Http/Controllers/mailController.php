@@ -8,14 +8,31 @@ use Illuminate\Support\Facades\Mail;
 
 class mailController extends Controller
 {
+    // public function sendMails()
+    // {
+    //     $details = [
+    //         'title' => 'This is a Mail from me to myself',
+    //         'body' => 'This is for testing how mail works in laravel'
+    //     ];
+
+    //     Mail::to('ezechelanre@gmail.com')->send(new testMail($details));
+    //     return "Email sent";
+    // }
+
     public function sendMails()
     {
-        $details = [
-            'title' => 'This is a Mail from me to myself',
-            'body' => 'This is for testing how mail works in laravel'
+        $to_name = "Lanre";
+        $to_email = "ezechelanre@gmail.com";
+        $data = [
+            'name'=>'Lanre',
+            'body' => 'A test email'
         ];
+        Mail::send('testMail', $data, function($message) use ($to_name, $to_email) {
 
-        Mail::to('ezechelanre@gmail.com')->send(new testMail($details));
-        return "Email sent";
+            $message->to($to_email, $to_name)->subject("Laravel Test Mail");
+            $message->from("ezechelanre@gmail.com", 'testMail');
+
+        });
     }
+
 }
