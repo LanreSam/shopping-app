@@ -21,15 +21,15 @@ class mailController extends Controller
 
     public function sendMails()
     {
-        $to_name = "Lanre";
+        //$to_name = "Lanre";
         $to_email = "ezechelanre@gmail.com";
         $data = [
             'name'=>'Lanre',
             'body' => 'A test email'
         ];
-        Mail::send('testMail', $data, function($message) use ($to_name, $to_email) {
+        Mail::send('testMail', $data, function($message) use ($to_email) {
 
-            $message->to($to_email, $to_name)->subject("Laravel Test Mail");
+            $message->to($to_email)->subject("Laravel Test Mail");
             $message->from("ezechelanre@gmail.com", 'testMail');
 
         });
