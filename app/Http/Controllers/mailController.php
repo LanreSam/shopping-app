@@ -30,7 +30,7 @@ class mailController extends Controller
         Mail::send('testMail', $data, function($message) use ($to_email) {
 
             $message->to($to_email)->subject("Laravel Test Mail");
-            $message->from("ezechelanre@gmail.com", 'testMail');
+            $message->from("ezechelanre@gmail.com");
 
         });
     }
