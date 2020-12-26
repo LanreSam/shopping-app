@@ -27,7 +27,7 @@ class mailController extends Controller
             'name'=>'Lanre',
             'body' => 'A test email'
         ];
-        Mail::send('testMail', $data, function($message) use ($to_email) {
+        Mail::send('emails.mail', $data, function($message) use ($to_email) {
 
             $message->to($to_email)->subject("Laravel Test Mail");
             $message->from("ezechelanre@gmail.com");

@@ -20,7 +20,7 @@ class testMail extends Mailable
      *
      * @return void
      */
-    public function __construct( $data)
+    public function __construct($data)
     {
         $this->data = $data;
     }
@@ -32,6 +32,6 @@ class testMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('test mail from Lanre')->view('emails.testMail');
+        return $this->subject('test mail from Lanre')->view('emails.mail');
     }
 }
