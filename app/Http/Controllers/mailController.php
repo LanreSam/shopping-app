@@ -15,8 +15,7 @@ class mailController extends Controller
             'body' => 'This is for testing how mail works in laravel'
         ];
 
-        //$message->from("ezechelanre@gmail.com");
-        Mail::to('ezechelanre@gmail.com')->send(new testMail($details));
+        Mail::to('ezechilanre@gmail.com')->send(new testMail($details));
         return "Email sent";
     }
 
@@ -32,8 +31,8 @@ class mailController extends Controller
 
     //         $message->to($to_email)->subject("Laravel Test Mail");
     //         $message->from("ezechelanre@gmail.com");
-
     //     });
+    //     return "Mail sent to your gmail account";
     // }
 
 }
