@@ -14,6 +14,7 @@ use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\uploadController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\websiteController;
@@ -104,3 +105,6 @@ Route::get('/payment', function () {
 
 //Sending mails
 Route::get('/send-mail', [mailController::class, 'sendMails']);
+
+//Eloquent
+Route::get('/student', [StudentController::class, 'fetchStudent']);

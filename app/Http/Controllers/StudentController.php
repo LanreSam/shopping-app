@@ -9,7 +9,7 @@ class StudentController extends Controller
 {
     public function fetchStudent()
     {
-        $student = Student::all();
+        $student = Student::whereBetween('id', [50,60])->orderBy('id','DESC')->get();
         return $student;
     }
 }
