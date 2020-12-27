@@ -108,3 +108,4 @@ Route::get('/send-mail', [mailController::class, 'sendMails']);
 
 //Eloquent
 Route::get('/student', [StudentController::class, 'fetchStudent']);
+Route::get('/add-user', [UsersController::class, 'insertRecord']);
