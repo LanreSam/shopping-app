@@ -9,4 +9,10 @@ class Users extends Model
 {
     protected $table = 'users';
     use HasFactory;
+
+
+    public function Phone()
+    {
+        return $this->hasOne('App\Models\Phone');
+    }
 }
