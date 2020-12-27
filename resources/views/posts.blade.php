@@ -26,6 +26,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
+                                        <th>ID</th>
                                         <th>Post title</th>
                                         <th>Post Body</th>
                                         <th>Action</th>
@@ -34,6 +35,7 @@
                                 <tbody>
                                     @foreach($posts as $post)
                                         <tr>
+                                            <td>{{ $post->id }}</td>
                                             <td>{{ $post->title }}</td>
                                             <td>{{ $post->body }}</td>
                                             <td>
