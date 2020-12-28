@@ -19,6 +19,7 @@ class Users extends Model
 
     public function fetchPhoneUserById($id)
     {
-        $phone = User::find($id);
+        $phone = User::find($id)->phone;
+        return $phone;
     }
 }
