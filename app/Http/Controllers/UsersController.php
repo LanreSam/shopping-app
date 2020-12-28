@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Phone;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use App\Models\Users;
 
 class UsersController extends Controller
 {
@@ -14,16 +15,17 @@ class UsersController extends Controller
         //return $request->path();
         return $request->url();
     }
+
     public function insertRecord()
     {
         $phone = new Phone();
         $phone->phone = '1234567890';
 
         $user = new User();
-        $user->name = "Lanre";
-        $user->email = "Lanre@gmail.com";
+        $user->name = "Samuel";
+        $user->email = "Sam@gmail.com";
         $user->password = encrypt('secret');
-        $user->Phone()->save();
+        $user->phone()->save($phone);
         $user->save();
         return "Record has been saved successfully";
     }
